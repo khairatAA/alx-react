@@ -5,10 +5,12 @@ module.exports = {
     entry: './task_5/dashboard/src/index.js',
     output: {
         filename: 'bundle.js',
-        path: path.resolve(__dirname, 'task_5/dashboard/dist'),
+        path: path.resolve(__dirname, '../dist'),
     },
     devServer: {
-        contentBase: './task_5/dashboard/dist',
+        static: {
+            directory: path.join(__dirname, '../dist'),
+        },
         hot: true,
     },
     devtool: 'inline-source-map',
