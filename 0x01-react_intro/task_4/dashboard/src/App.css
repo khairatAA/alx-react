@@ -1,0 +1,39 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Set minimum height to viewport height */
+}
+
+.App-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #E0354B;
+  padding: 10px;
+}
+
+.App-header h1{
+  color: #E0354B;
+  font-weight: 800;
+}
+
+.App-body{
+  flex-grow: 1;
+  padding: 10px;
+}
+
+.App-footer{
+  border-top: 2px solid #E0354B;
+  margin-top: auto;
+  padding: 10px;
+  font-style: italic;
+}
+
+.App-footer p{
+  text-align: center;
+}
+
+.Form{
+  display: flex;
+  gap: 10px;
+}
