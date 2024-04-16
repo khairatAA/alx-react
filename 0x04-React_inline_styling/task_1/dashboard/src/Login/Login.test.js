@@ -2,6 +2,10 @@ import React from 'react';
 import Login from './Login';
 import { render } from '@testing-library/react'
 
+import { StyleSheetTestUtils } from 'aphrodite';
+
+StyleSheetTestUtils.suppressStyleInjection();
+
 describe('Login component', () => {
     it('renders without crashing', () => {
         render(<Login />)

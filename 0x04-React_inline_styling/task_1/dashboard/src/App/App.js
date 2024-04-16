@@ -61,7 +61,7 @@ class App extends Component {
             title="News from the School"
             children="Welcome to News Blog :)"
           />
-          <Footer />
+          <Footer className={css(styles.AppFooter)} />
         </div>
       </>
     )
@@ -79,5 +79,14 @@ const styles = StyleSheet.create({
     display: 'flex',
     flexDirection: 'column',
     height: '100vh',
+  },
+  AppFooter: {
+    borderTop: '2px solid #E0354B',
+    marginTop: 'auto',
+    padding: 10,
+    fontStyle: 'italic',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center'
   }
 })

@@ -2,7 +2,9 @@
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react'; // Import render from testing-library/react
 import App from './App'; // Import your App component
+import { StyleSheetTestUtils } from 'aphrodite';
 
+StyleSheetTestUtils.suppressStyleInjection();
 describe('App component', () => {
     it('contains the Notifications component', () => {
         const { getByTestId } = render(<App />); // Render the App component

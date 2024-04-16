@@ -1,6 +1,9 @@
 import React from 'react';
 import Header from "./Header";
 import { render } from '@testing-library/react'
+import { StyleSheetTestUtils } from 'aphrodite';
+
+StyleSheetTestUtils.suppressStyleInjection();
 
 describe('Header component', () => {
     it('renders without crashing', () => {
