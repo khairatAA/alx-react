@@ -1,5 +1,5 @@
 import React from 'react'
-const { fromJS } = require('immutable');
+import { fromJS } from 'immutable';
 
 function getImmutableObject(object) {
     return (
