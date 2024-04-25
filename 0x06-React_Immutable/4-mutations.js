@@ -11,4 +11,4 @@ export const map = Map({
 
 export const map2 = map
     .set(2, 'Benjamin')
-    .set(2, 'Oliver')
+    .set(4, 'Oliver')
