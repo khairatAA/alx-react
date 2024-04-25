@@ -1,10 +1,7 @@
-import React from 'react'
 import { fromJS } from 'immutable';
 
-function getImmutableObject(object) {
-    return (
-        fromJS(object)
-    )
-}
+export function getImmutableObject(object) {
+    const map = fromJS(object)
 
-export default getImmutableObject
+    return map
+}
