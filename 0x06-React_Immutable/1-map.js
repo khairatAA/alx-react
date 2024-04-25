@@ -1,7 +1,9 @@
 import { Map } from 'immutable';
 
-export function getImmutableObject(object) {
-    const map = Map(object)
+export default function getImmutableObject(object) {
+    if (typeof object === 'object') {
+        const map = Map(object)
 
-    return (map)
+        return (map)
+    }
 }
