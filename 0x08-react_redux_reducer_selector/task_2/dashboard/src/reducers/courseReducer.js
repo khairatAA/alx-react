@@ -1,16 +1,14 @@
-import { FETCH_COURSE_SUCCESS, SELECT_COURSE, UNSELECT_COURSE } from "../actions/courseActionTypes";
+import { FETCH_COURSE_SUCCESS, SELECT_COURSE, UNSELECT_COURSE } from '../actions/courseActionTypes';
 
-const initialState = []
+const initialState = [];
 
-const courseReducer = (state = initialState, action) => {
+export default function courseReducer(state = initialState, action) {
     switch (action.type) {
         case FETCH_COURSE_SUCCESS:
-            const courses = action.data.map(course => ({
+            return action.data.map(course => ({
                 ...course,
                 isSelected: false
             }));
-            return courses;
-
         case SELECT_COURSE:
             return state.map(course => {
                 if (course.id === action.index) {
@@ -21,7 +19,6 @@ const courseReducer = (state = initialState, action) => {
                 }
                 return course;
             });
-
         case UNSELECT_COURSE:
             return state.map(course => {
                 if (course.id === action.index) {
@@ -32,10 +29,7 @@ const courseReducer = (state = initialState, action) => {
                 }
                 return course;
             });
-
         default:
             return state;
     }
 }
-
-export default courseReducer;
